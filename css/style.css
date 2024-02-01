@@ -53,7 +53,7 @@ main{
 /** Header */
 header {
     & h1, nav, video, #content{
-        position: fixed;
+        position:absolute;
         width: 100%;
         color: var(--white);
         & ul li a{
