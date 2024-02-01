@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+:root{
+    font-size: 16px;
+}
+
 html{
     height: 100%;
 }
@@ -8,32 +12,31 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --white: #FDFDFD;
+    --grey: #352E28;
+    --green: #3D5D52;
+    --beige: #D3B8A5;
 }
 
 body{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #cef6d8;
+    background-color: var(--white);
 }
 
 h1,h2{
     text-align: center;
-    color: white;
+    color: var(--grey);
 }
 
 header, footer{
     display: flex;
     flex: 0 0 auto; /* flex-grow, flex-shrink, flex-basis */
     justify-content: center;
-    background-color: #0b3824;
+    background-color: var(--beige);
 }
 
 main{
     flex: 1 0 auto; /* main ocupa todo el espacio entre header y footer */
-    /*
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: auto;
-    */
 }
