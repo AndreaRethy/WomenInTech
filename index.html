@@ -39,7 +39,34 @@
 
     <!-- Contenido Secundario -->
     <aside>
-        <h2>Contenido Secundario</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend><h2>Sign up for our newsletter</h2></legend>
+                <ul>
+                    <li>
+                        <input type="text" name="name" id="name" aria-label="name" placeholder="Name">
+                    </li>
+                    <li>
+                        <input type="surname" name="surname" id="surname" aria-label="surname" placeholder="Surname">
+                    </li>
+                    <li>
+                        <input type="email" name="email" id="email" aria-label="email" placeholder="example@email.com">
+                    </li>
+                    <li>
+                        <input type="checkbox" name="privacy-policy" id="privacy-policy">
+                        <label for="privacy-policy">Accept our Privacy Policy. <a href="#">Terms</a></label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <ul>
+                    <li>
+                        <input type="reset" value="Clear">
+                        <input type="submit" value="Submit">
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
     </aside>
 
     <!-- Pie de Página -->
