@@ -2,6 +2,7 @@
 
 :root{
     font-size: 16px;
+    line-height: 1.5;
 }
 
 html{
@@ -25,7 +26,7 @@ body{
     background-color: var(--white);
 }
 
-h1,h2{
+h2{
     text-align: center;
     color: var(--grey);
 }
@@ -55,6 +56,9 @@ header {
         position: fixed;
         width: 100%;
         color: var(--white);
+        & ul li a{
+            color: inherit;
+        }
     }
     & #content{
         display: flex;
@@ -75,7 +79,18 @@ header {
     }
     & nav{
         top: 0;
-
+        & ul {
+            display: flex;
+            justify-content: right;
+            & li{
+                list-style-type: none;
+                padding: 1rem;
+            }
+        }
     }
-    
+    & h1{
+        text-align: center;
+        top: 35vh;
+
+    }   
 }
