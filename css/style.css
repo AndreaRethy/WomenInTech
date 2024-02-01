@@ -16,7 +16,9 @@ html{
     --white: #FDFDFD;
     --grey: #352E28;
     --green: #3D5D52;
+    --light-green: #3d5d5251;
     --beige: #D3B8A5;
+    --link: #0c4ebf;
 }
 
 body{
@@ -93,4 +95,62 @@ header {
         top: 35vh;
 
     }   
+}
+
+
+/** FORM */
+form {
+    width: 100%;
+    & fieldset{
+        border: none;
+        width: 100%;
+        & ul li {
+            list-style: none;
+            margin: 0.5em 0;
+        }
+        & input {
+            padding: 0.5em 1em;
+            border: 1px solid var(--light-green);
+            border-radius: 6px;
+            outline: none;
+            color: var(--green);
+            &::placeholder{
+                color: var(--light-green);
+            }
+        }
+        & #name, #surname, #email {
+            width: 100%;
+            &:focus{
+                border: 1px solid var(--green);
+            }
+            &:active{
+                border: 1px solid var(--green);
+            }
+        }
+        & input[type="checkbox"] {
+            accent-color: #fdfdfd;
+            background-color: #3D5D52;
+        }
+        & input[type="submit"] {
+            background-color: var(--green);
+            color: var(--white);
+        }
+        & input[type="reset"] {
+            background-color: var(--white);
+            color: var(--green);
+        }
+        & input[type="submit"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:active,
+        input[type="reset"]:active {
+            background-color: var(--light-green);
+            color: var(--green);
+        }
+        & label {
+            color: var(--grey);
+            & a {
+                color: var(--link);
+            }
+        }
+    }
 }
