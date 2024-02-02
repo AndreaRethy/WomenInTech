@@ -34,7 +34,7 @@ body{
 }
 
 
-/** TITULOS Y PÁRRAFOS  */
+/** TITULOS Y PÁRRAFOS  **/
 h1, h2, h3 {
     font-family: var(--font-titles);
 }
@@ -56,7 +56,7 @@ h2 {
 }
 
 
-/** HEADER */
+/** HEADER **/
 header {
     flex: 0 0 70vh;
 }
@@ -111,15 +111,15 @@ header {
 }
 
 
-/** MAIN Content */
+/** MAIN **/
 main{
     flex: 1 0 auto;
     width: 100vw;
-    padding: 0 1em;
+    /* padding: 0 1em; */
     margin: 0 auto;
 }
 
-/** General styles for card */
+/* General styles for card */
 .card{
     width: 70%;
     border-radius: 15px;
@@ -165,13 +165,71 @@ main{
     }
 }
 
-/** FLIP  */
+/* HORIZONTAL SLIDE */
+#slider-container{
+    background-color: var(--green);
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    &>ul {
+        width: 100%;
+        display: flex;
+        gap: 1em;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        list-style: none;
+    }
+}
+
+.slide-arrow {
+position: absolute;
+display: flex;
+top: 0;
+bottom: 0;
+margin: auto;
+height: 4rem;
+background-color: white;
+border: none;
+width: 2rem;
+font-size: 3rem;
+padding: 0;
+cursor: pointer;
+opacity: 0.5;
+transition: opacity 100ms;
+z-index: 1;
+}
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+opacity: 1;
+}
+
+#slide-arrow-prev {
+left: 0;
+padding-left: 0.25rem;
+border-radius: 0 2rem 2rem 0;
+}
+
+#slide-arrow-next {
+right: 0;
+padding-left: 0.75rem;
+border-radius: 2rem 0 0 2rem;
+}
+
+/* .actual {
+    margin: 0 auto;
+} */
+
+/* FLIP  */
 /* The flip card container - width and height to be adjusted. */
 .card {
     background-color: transparent;
     width: 300px;
     height: 600px;
     perspective: 1000px; /* 3D effect */
+    flex: none;
 }
   
   /* This container is needed to position the front and back side */
@@ -205,7 +263,7 @@ main{
 }
 
 
-/** FORM */
+/** FORM **/
 form {
     width: 100%;
     padding: 0 1em;
@@ -265,7 +323,7 @@ form {
 }
 
 
-/** FOOTER */
+/** FOOTER **/
 footer{
     flex: 0 0 auto; /* flex-grow, flex-shrink, flex-basis */
 }
