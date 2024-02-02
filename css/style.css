@@ -27,6 +27,7 @@ html{
 body{
     display: flex;
     flex-direction: column;
+    gap: 2em;
     height: 100vh;
     background-color: var(--white);
     font-family: var(--font-text);
