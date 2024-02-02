@@ -42,6 +42,7 @@ h1, h2, h3 {
 h1 {
     text-align: center;
     top: 35vh;
+    color: var(--grey);
 }
 
 h2 {
@@ -71,9 +72,8 @@ header {
     & h1, nav, video, #content {
         position: absolute;
         width: 100%;
-        color: var(--white);
         & ul li a {
-            color: inherit;
+            color: var(--white);
             text-decoration: none;
             &:hover {
                 text-decoration: underline;
@@ -84,7 +84,7 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.8);
+        background: linear-gradient(transparent, white);
         height: 70vh;
     }
     & figure {
