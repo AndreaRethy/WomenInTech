@@ -23,9 +23,12 @@ btnLeft.addEventListener('click', () =>{
 
     sliderSection.forEach(slider => {
         slider.classList.remove('actual');
-    })
+    });
     sliderActual.classList.add('actual');
     // console.log(sliderActual.innerHTML);
+
+    // const slideWidth = sliderActual.clientWidth;
+    // console.log(slideWidth);
     
     SLIDER.style.marginLeft = '0';
     SLIDER.style.transition = 'all 0.5s';
@@ -39,14 +42,15 @@ btnLeft.addEventListener('click', () =>{
 
 // Función listener para el botón derecho
 const MOVERIGHT = () =>{
-    let sliderSectionFirst = document.querySelectorAll('.card')[0];
-    let sliderActual = sliderSection[1];
+    let sliderSection = document.querySelectorAll('.card');
+    let sliderSectionFirst = sliderSection[0];
+    let sliderActual = sliderSection[2];
 
     sliderSection.forEach(slider => {
         slider.classList.remove('actual');
-    })
+    });
     sliderActual.classList.add('actual');
-    // console.log(sliderActual.innerHTML);
+    console.log(sliderActual.innerHTML);
 
     SLIDER.style.marginLeft = '-200%';
     SLIDER.style.transition = 'all 0.5s';

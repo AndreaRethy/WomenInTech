@@ -168,7 +168,7 @@ main{
     }
 }
 
-/* HORIZONTAL SLIDE */
+/** HORIZONTAL SLIDE */
 .container-slider{
     width: 100%;
     /* max-width: 400px; */
@@ -183,6 +183,14 @@ main{
     display: flex;
     gap: 1rem;
     margin-left: -100%;
+}
+
+.card{
+    margin: 0;
+}
+
+.actual{
+    margin: 0 auto;
 }
 
 .slider-btn{
@@ -249,7 +257,7 @@ border-radius: 2rem 0 0 2rem;
 }
  */
 
-/* FLIP  */
+/** FLIP  */
 /* The flip card container - width and height to be adjusted. */
 .card {
     background-color: transparent;
