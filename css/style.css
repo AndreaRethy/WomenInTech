@@ -115,7 +115,7 @@ header {
 main{
     flex: 1 0 auto;
     width: 100vw;
-    padding: 0 1em;
+    /* padding: 0 1em; */
     margin: 0 auto;
 }
 
@@ -205,80 +205,66 @@ main{
 }
 
 /** MODAL */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-  }
 
-.modal-content {
-background-color: #fff;
-padding: 20px;
-border-radius: 5px;
-}
-
-iframe {
-cursor: pointer;
-}
-.holder {
-    width: 560;
-    height: 315px;
-    position: relative;
-  }
-  
-  .frame {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .overlay {
+.overlay {
     position: absolute;
-    top: 0;
+    /* background-color: #de1c1c6c; */
+    bottom: 25%;
     left: 0;
-    width: 560%;
-    height: 315px;
+    width: 100%;
+    height: 25%;
     cursor: pointer;
-  }
-/* #container{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-#abrir{
-    cursor: pointer;
-    transition: scale 0.5s ease;
+#container iframe{
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    width: 100%;
+    height: 25%;
 }
-#abrir:hover{
-    scale: 1.05;
-} */
-
-
 /* Modal (background) */
-/* .modal{
+.modal{
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     overflow: auto;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.4);
+    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
-} */
+}
+.oculta-modal{
+    display: none;
+}
+
+/* Modal Content/Box */
+.modal-container {
+    position: relative;
+    /* margin: auto; */
+    padding: 0;
+    width: 95%;
+    height: 100%;
+    animation: modal;
+    animation-duration: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container figure{
+    width: 50%;
+    & iframe{
+        width: 100%;
+    }
+}
+
 
 /* The Close Button */
-/* .modal-container i {
-    color: var(--beige);
+.modal-container > i {
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -291,23 +277,9 @@ cursor: pointer;
     text-decoration: none;
     cursor: pointer;
     transform: scale(1.05);
-} */
-
-/* Modal Content/Box */
-/* .modal-container {
-    position: relative;
-    background-color: var(--white);
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 95%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    animation: modal;
-    animation-duration: 3s
 }
-.oculta-modal{
-    display: none;
-} */
+
+
 /* Add Animation */
 @keyframes modal {
     from {

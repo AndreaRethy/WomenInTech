@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Women In Tech</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +12,8 @@
 
     <!-- Google Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/79d8e2848d.js" crossorigin="anonymous"></script>
 
     <!-- Our styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -56,37 +53,23 @@
                         <h2>Ada Lovelace</h2>
                         <h3>Invento</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, cupiditate iure, id sequi et ducimus iusto laudantium voluptatibus repellendus veniam excepturi suscipit blanditiis incidunt architecto! Quo adipisci iure aspernatur enim!</p>
-                        <div class="holder">
-                            <iframe id="abrir" src="https://www.youtube.com/embed/A55YX5Gve3U?si=FtTR_xY5euaxiNUk" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
-                            <div class="overlay trigger" src="https://www.youtube.com/embed/A55YX5Gve3U?si=FtTR_xY5euaxiNUk" data-target="#videoModal" data-toggle="modal"></div>
-                        </div>
-                        
-                        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                              <div class="modal-content">
-                                <button type="button" class="close btn-round btn-primary" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                <div class="embed-responsive embed-responsive-16by9">
-                                  <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        <!-- <div class="modal oculta-modal" id="modal">
-                            <div class="modal-container">
-                                <i class="fa-solid fa-square-xmark" id="cerrar"></i>
-                                <figure>
-                                    <iframe src="https://www.youtube.com/embed/A55YX5Gve3U?si=FtTR_xY5euaxiNUk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
-                                </figure>
-                            </div>
-                        </div> -->
-                        
+                        <div id="container">
+                            <iframe src="https://www.youtube.com/embed/A55YX5Gve3U?si=FtTR_xY5euaxiNUk" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+                            <div class="overlay" id="abrir"></div>
+                        </div> 
                     </div>
                 </div>
             </div>    
         </section>
     </main>
+    <div class="modal oculta-modal" id="modal">
+        <div class="modal-container">
+            <i class="fa-solid fa-square-xmark" id="cerrar"></i>
+            <figure>
+                <iframe src="https://www.youtube.com/embed/A55YX5Gve3U?si=FtTR_xY5euaxiNUk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+            </figure>
+        </div>
+    </div>
 
     <!-- Contenido Secundario -->
     <aside id="newsletter">
