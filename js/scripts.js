@@ -25,19 +25,19 @@ btnLeft.addEventListener('click', () =>{
     setTimeout(() =>{
         SLIDER.style.transition = 'none';
         SLIDER.insertAdjacentElement('afterbegin', sliderSectionLast);
-        SLIDER.style.marginLeft = '-100%';
+        SLIDER.style.marginLeft = '-65%';
     }, 500);
  });
 
 // Función listener para el botón izquierdo
 const MOVERIGHT = () =>{
     let sliderSectionFirst = document.querySelectorAll('.card')[0];
-    SLIDER.style.marginLeft = '-200%';
+    SLIDER.style.marginLeft = '-130%';
     SLIDER.style.transition = 'all 0.5s';
     setTimeout(() =>{
         SLIDER.style.transition = 'none';
         SLIDER.insertAdjacentElement('beforeend', sliderSectionFirst);
-        SLIDER.style.marginLeft = '-100%';
+        SLIDER.style.marginLeft = '-65%';
     }, 500);
 };
 
