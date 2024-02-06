@@ -205,7 +205,47 @@ main{
 }
 
 /** MODAL */
-#container{
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+
+.modal-content {
+background-color: #fff;
+padding: 20px;
+border-radius: 5px;
+}
+
+iframe {
+cursor: pointer;
+}
+.holder {
+    width: 560;
+    height: 315px;
+    position: relative;
+  }
+  
+  .frame {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 560%;
+    height: 315px;
+    cursor: pointer;
+  }
+/* #container{
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -218,11 +258,11 @@ main{
 }
 #abrir:hover{
     scale: 1.05;
-}
+} */
 
 
 /* Modal (background) */
-.modal{
+/* .modal{
     position: fixed;
     z-index: 1;
     overflow: auto;
@@ -231,14 +271,13 @@ main{
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.4);
-    /* border-radius: 15px; */
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* The Close Button */
-.modal-container i {
+/* .modal-container i {
     color: var(--beige);
     float: right;
     font-size: 28px;
@@ -252,10 +291,10 @@ main{
     text-decoration: none;
     cursor: pointer;
     transform: scale(1.05);
-}
+} */
 
 /* Modal Content/Box */
-.modal-container {
+/* .modal-container {
     position: relative;
     background-color: var(--white);
     margin: auto;
@@ -268,7 +307,7 @@ main{
 }
 .oculta-modal{
     display: none;
-}
+} */
 /* Add Animation */
 @keyframes modal {
     from {
