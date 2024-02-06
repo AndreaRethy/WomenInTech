@@ -117,6 +117,9 @@ main{
     width: 100vw;
     /* padding: 0 1em; */
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* General styles for card */
@@ -166,23 +169,49 @@ main{
 }
 
 /* HORIZONTAL SLIDE */
-#slider-container{
-    background-color: var(--green);
-    width: 100%;
-    height: 100%;
-    margin: auto;
+.container-slider{
+    width: 90%;
+    max-width: 300px;
+    box-shadow: 0 0 0 10px #fff, 0 15px 50px;
     position: relative;
-    overflow: hidden;
-    &>ul {
-        width: 100%;
-        display: flex;
-        gap: 1em;
-        overflow: scroll;
-        scroll-behavior: smooth;
-        list-style: none;
-    }
+    /* overflow: hidden; */
 }
 
+.slider{
+    height: 600px;
+    width: 400%;
+    display: flex;
+    margin-left: -100%;
+}
+
+.slider-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    border: none;
+}
+
+.slider-btn-right{
+    right: 10px;
+}
+
+.slider-btn-left{
+    left: 10px;
+}
+
+.slider-btn:hover{
+    background-color: #fff;
+    cursor: pointer;
+}
+/*
 .slide-arrow {
 position: absolute;
 display: flex;
@@ -192,7 +221,7 @@ margin: auto;
 height: 4rem;
 background-color: white;
 border: none;
-width: 2rem;
+width: 2rem;    
 font-size: 3rem;
 padding: 0;
 cursor: pointer;
@@ -217,10 +246,7 @@ right: 0;
 padding-left: 0.75rem;
 border-radius: 2rem 0 0 2rem;
 }
-
-/* .actual {
-    margin: 0 auto;
-} */
+ */
 
 /* FLIP  */
 /* The flip card container - width and height to be adjusted. */
@@ -235,6 +261,7 @@ border-radius: 2rem 0 0 2rem;
   /* This container is needed to position the front and back side */
 .card-inner {
     position: relative;
+    display: block;
     width: 100%;
     height: 100%;
     text-align: center;
