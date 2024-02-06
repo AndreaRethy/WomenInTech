@@ -170,19 +170,19 @@ main{
 
 /* HORIZONTAL SLIDE */
 .container-slider{
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0 0 0 10px #fff, 0 15px 50px;
+    width: 100%;
+    /* max-width: 400px; */
+    /* box-shadow: 0 0 0 10px #fff, 0 15px 50px; */
     position: relative;
     overflow: hidden;
 }
 
 .slider{
-    height: 600px;
+    height: 615px;
     width: 400%;
     display: flex;
     gap: 1rem;
-    margin-left: -65%;
+    margin-left: -100%;
 }
 
 .slider-btn{
