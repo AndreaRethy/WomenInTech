@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Women In Tech</title>
-
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter&family=Oswald&display=swap" rel="stylesheet">
 
     <!-- Google Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/79d8e2848d.js" crossorigin="anonymous"></script>
 
     <!-- Our styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -48,13 +50,14 @@
                             <h2>Invento</h2>
                             <p>Ada Lovelace</p>
                         </div>
-                        <div class="card-back">
+                        <div class="card-back" id="container">
                             <h2>Ada Lovelace</h2>
                             <h3>Invento</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, cupiditate iure, id sequi et ducimus iusto laudantium voluptatibus repellendus veniam excepturi suscipit blanditiis incidunt architecto! Quo adipisci iure aspernatur enim!</p>
-                            <figure>
-                                <iframe src="https://www.youtube.com/embed/A55YX5Gve3U?si=FtTR_xY5euaxiNUk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
-                            </figure>
+                            <div id="container">
+                                <iframe src="https://www.youtube.com/embed/A55YX5Gve3U?si=FtTR_xY5euaxiNUk" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+                                <div class="overlay" id="abrir"></div>
+                        </div> 
                         </div>
                     </div>
                 </div>
@@ -120,6 +123,14 @@
             <button class="slider-btn slider-btn-left" id="btn-left">&#60;</button>
         </section>
     </main>
+    <div class="modal oculta-modal" id="modal">
+        <div class="modal-container">
+            <i class="fa-solid fa-square-xmark" id="cerrar"></i>
+            <figure>
+                <iframe src="https://www.youtube.com/embed/A55YX5Gve3U?si=FtTR_xY5euaxiNUk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+            </figure>
+        </div>
+    </div>
 
     <!-- Contenido Secundario -->
     <aside id="newsletter">

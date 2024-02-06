@@ -289,6 +289,93 @@ border-radius: 2rem 0 0 2rem;
     transform: rotateY(180deg);
 }
 
+/** MODAL */
+
+.overlay {
+    position: absolute;
+    /* background-color: #de1c1c6c; */
+    bottom: 25%;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    cursor: pointer;
+}
+#container iframe{
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    width: 100%;
+    height: 25%;
+}
+/* Modal (background) */
+.modal{
+    position: fixed;
+    z-index: 3;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.oculta-modal{
+    display: none;
+}
+
+/* Modal Content/Box */
+.modal-container {
+    position: relative;
+    /* margin: auto; */
+    padding: 0;
+    width: 95%;
+    height: 100%;
+    animation: modal;
+    animation-duration: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container figure{
+    width: 50%;
+    & iframe{
+        width: 100%;
+    }
+}
+
+
+/* The Close Button */
+.modal-container > i {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: transform ease 0.3s;
+}
+
+.modal-container i:hover,
+.modal-container i:focus {
+    color: var(--grey);
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+/* Add Animation */
+@keyframes modal {
+    from {
+        top: -300px;
+         opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
 
 /** FORM **/
 form {
