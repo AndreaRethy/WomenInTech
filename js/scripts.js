@@ -19,7 +19,7 @@ SLIDER.insertAdjacentElement('afterbegin', sliderSectionLast);
 btnLeft.addEventListener('click', () =>{
     let sliderSection = document.querySelectorAll('.card');
     let sliderSectionLast = sliderSection[sliderSection.length-1];
-    let sliderActual = sliderSection[0];
+    let sliderActual = sliderSection[1];
 
     sliderSection.forEach(slider => {
         slider.classList.remove('actual');
@@ -44,13 +44,13 @@ btnLeft.addEventListener('click', () =>{
 const MOVERIGHT = () =>{
     let sliderSection = document.querySelectorAll('.card');
     let sliderSectionFirst = sliderSection[0];
-    let sliderActual = sliderSection[2];
+    let sliderActual = sliderSection[1];
 
     sliderSection.forEach(slider => {
         slider.classList.remove('actual');
     });
     sliderActual.classList.add('actual');
-    console.log(sliderActual.innerHTML);
+    // console.log(sliderActual.innerHTML);
 
     SLIDER.style.marginLeft = '-200%';
     SLIDER.style.transition = 'all 0.5s';
