@@ -47,18 +47,17 @@
                         <h2>Invento</h2>
                         <p>Ada Lovelace</p>
                     </div>
-                    <div class="card-back">
+                    <div class="card-back" id="container">
                         <h2>Ada Lovelace</h2>
                         <h3>Invento</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, cupiditate iure, id sequi et ducimus iusto laudantium voluptatibus repellendus veniam excepturi suscipit blanditiis incidunt architecto! Quo adipisci iure aspernatur enim!</p>
-                        <figure id="myBtn">
-                            <img src="https://lorem.cat/600x600"/>                
-                            
-                            <!-- <iframe src="https://www.youtube.com/embed/A55YX5Gve3U?si=FtTR_xY5euaxiNUk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe> -->
+                        <figure>
+
+                            <img id="abrir" src="https://lorem.cat/600x600"/>                
                         </figure>
-                        <div id="myModal" class="modal">
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
+                        <div class="modal oculta-modal" id="modal">
+                            <div class="modal-container">
+                                <i class="fa-solid fa-square-xmark" id="cerrar"></i>
                                 <figure>
                                     <iframe src="https://www.youtube.com/embed/A55YX5Gve3U?si=FtTR_xY5euaxiNUk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
                                 </figure>
@@ -107,5 +106,6 @@
     <footer>
         <p>Pie de Página</p>
     </footer>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
