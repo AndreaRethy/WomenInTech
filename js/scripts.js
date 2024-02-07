@@ -71,15 +71,18 @@ let modal = document.querySelector('#modal');
 // let content = document.querySelector('.modal-content');
 
 // Get the button that opens the modal
-let abrir = document.querySelector('#abrir');
+// let abrir = document.querySelector('#abrir');
+let abrirVentanas = document.querySelectorAll('.abrir');
 
 // Get the <span> element that closes the modal
 let cerrar = document.querySelector('#cerrar');
 
 //Funcion abrir modal
-abrir.addEventListener('click', () =>{
-    modal.classList.remove('oculta-modal');
-    console.log('click en abrir');
+abrirVentanas.forEach(abrir =>{
+    abrir.addEventListener('click', () =>{
+        modal.classList.remove('oculta-modal');
+        console.log('click en abrir');
+    });
 });
 
 //Funcion cerrar modal
