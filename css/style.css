@@ -287,7 +287,6 @@ main{
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.4);
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -306,32 +305,40 @@ main{
     animation: modal;
     animation-duration: 1s;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/* The video */
 .modal-container figure{
-    width: 50%;
+    width: 85%;
+    aspect-ratio: 16/9;
     & iframe{
         width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 15px;
     }
 }
 
 
 /* The Close Button */
-.modal-container > i {
-    float: right;
-    font-size: 28px;
+.modal-container i {
+    color: var(--grey);
+    align-self: flex-end;
+    padding: 0.5rem;
+    font-size: 1.75rem;
     font-weight: bold;
     transition: transform ease 0.3s;
 }
 
 .modal-container i:hover,
 .modal-container i:focus {
-    color: var(--grey);
+    color: var(--white);
     text-decoration: none;
     cursor: pointer;
-    transform: scale(1.05);
+    transform: scale(1.15);
 }
 
 
