@@ -124,8 +124,11 @@ main{
 
 /* General styles for card */
 .card{
-    /* width: 70%; */
+    /* width: 300px; */
+    width: 18%;
+    height: 600px;
     border-radius: 15px;
+    flex: none;
     & figure{
         width: 100%;
         max-height: 50%;
@@ -173,8 +176,7 @@ main{
 .container-slider{
     width: 100%;
     max-width: 900px;
-    border: 2px solid red;
-    /* box-shadow: 0 0 0 10px #fff, 0 15px 50px; */
+    /* border: 2px solid red; */
     position: relative;
     overflow: hidden;
 }
@@ -220,14 +222,10 @@ main{
 }
 
 /** FLIP  */
-/* The flip card container - width and height to be adjusted. */
+/* The flip card */
 .card {
     background-color: transparent;
-    /* width: 300px; */
-    width: 18%;
-    height: 600px;
     perspective: 1000px; /* 3D effect */
-    flex: none;
 }
   
   /* This container is needed to position the front and back side */

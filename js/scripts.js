@@ -63,5 +63,5 @@ const MOVERIGHT = () =>{
 btnRight.addEventListener('click', MOVERIGHT);
 
 
-// Automatización
-setInterval(MOVERIGHT, 50000);
+// Automatización (cómo cambiar que no se mueva cuando la tarjeta detras está visible? Tambien evitar-lo si el usuario justo acaba de cambiar tarjeta)
+setInterval(MOVERIGHT, 10000);
