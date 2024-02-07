@@ -70,16 +70,22 @@ setInterval(MOVERIGHT, 10000);
 let modal = document.querySelector('#modal');
 // let content = document.querySelector('.modal-content');
 
+let modalVideo = document.querySelector('#modal-video');
+
 // Get the button that opens the modal
 // let abrir = document.querySelector('#abrir');
 let abrirVentanas = document.querySelectorAll('.abrir');
+
+let cardVideos = document.querySelectorAll('.card-video');
 
 // Get the <span> element that closes the modal
 let cerrar = document.querySelector('#cerrar');
 
 //Funcion abrir modal
-abrirVentanas.forEach(abrir =>{
+abrirVentanas.forEach((abrir, index) =>{
     abrir.addEventListener('click', () =>{
+        // console.log(cardVideos[index].src);
+        modalVideo.src = cardVideos[index].src;
         modal.classList.remove('oculta-modal');
         console.log('click en abrir');
     });
