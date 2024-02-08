@@ -14,7 +14,7 @@ Born: Ada Byron, 10 December 1815 in London, England
 
 Died: 27 November 1852
 
-was an English mathematician and writer, chiefly known for her work on [Charles Babbage](https://en.wikipedia.org/wiki/Charles_Babbage "Charles Babbage")'s proposed mechanical general-purpose [computer](https://en.wikipedia.org/wiki/Computer "Computer"), the [Analytical Engine](https://en.wikipedia.org/wiki/Analytical_Engine "Analytical Engine"). She was the first to recognise that the machine had applications beyond pure calculation.
+Ada was an English mathematician and writer, chiefly known for her work on [Charles Babbage](https://en.wikipedia.org/wiki/Charles_Babbage "Charles Babbage")'s proposed mechanical general-purpose [computer](https://en.wikipedia.org/wiki/Computer "Computer"), the [Analytical Engine](https://en.wikipedia.org/wiki/Analytical_Engine "Analytical Engine"). She was the first to recognise that the machine had applications beyond pure calculation.
 
 ##### BACK:
 
