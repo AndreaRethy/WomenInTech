@@ -50,13 +50,13 @@ Hopper’s first compiler, A-O, was unveiled in 1949 and used symbolic mathemati
 
 When discussions arose as to how to create a standardized, universal computer language, Hopper was deeply involved in the development of COBOL.  Her Flow-Matic compiler was used to help form a basis for the language, and she designed standard manuals and tools for it, as well as translator programs that converted non-standard COBOL languages into the standard version. The first specifications for COBOL were made available in 1959.
 
-
-
 ## Frances Elizabeth Allen
 
 https://en.wikipedia.org/wiki/Frances_Allen
 
 https://www.youtube.com/watch?v=XQSMvQjobMs
+
+
 
 Photo: By Rama - Own work, CC BY-SA 2.0 fr,`<a href= "https://commons.wikimedia.org/w/index.php?curid=4844465" target= "_blank">`Public Domain `</a>`
 
@@ -65,7 +65,6 @@ Photo: By Rama - Own work, CC BY-SA 2.0 fr,`<a href= "https://commons.wikimedia.
 ### Military communucations System
 
 https://lemelson.mit.edu/resources/hedy-lamarr
-
 
 On June 10, 1941, Lamarr and composer George Antheil received Patent No. 2,292,387 for their invention of a classified communication system that was especially useful for submarines. The system was a stroke of genius. It was based on radio frequencies, changed at irregular periods, that were synchronized between the transmitter and receiver.
 
@@ -80,7 +79,6 @@ https://en.wikipedia.org/wiki/Hedy_Lamarr
 Born November 9, 1914 (Austria-Hungria, Vienna)
 
 Died January 19, 2000 (Florida , U.S.)
-
 
 https://www.youtube.com/watch?v=J8IFfQdAitI
 
