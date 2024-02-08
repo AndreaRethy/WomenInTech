@@ -63,7 +63,7 @@ const MOVERIGHT = () =>{
 btnRight.addEventListener('click', MOVERIGHT);
 
 // Automatización (cómo cambiar que no se mueva cuando la tarjeta detras está visible? Tambien evitar-lo si el usuario justo acaba de cambiar tarjeta)
-setInterval(MOVERIGHT, 10000);
+// setInterval(MOVERIGHT, 10000);
 
 //MODAL
 // Get the modal
