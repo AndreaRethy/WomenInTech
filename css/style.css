@@ -115,9 +115,12 @@ header {
 main{
     flex: 1 0 auto;
     width: 100vw;
+    max-width: 900px;
     /* padding: 0 1em; */
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
 }
