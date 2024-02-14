@@ -35,7 +35,7 @@ body{
 
 
 /** TITULOS Y PÁRRAFOS  **/
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-titles);
 }
 
@@ -51,7 +51,7 @@ h2 {
     color: var(--grey);
 }
 
-.card-front>p {
+.card-front>p:last-of-type {
     font-family: var(--font-names);
     font-weight: 700;
 }
