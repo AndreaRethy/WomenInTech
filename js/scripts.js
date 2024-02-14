@@ -58,12 +58,67 @@ const MOVERIGHT = () =>{
         SLIDER.style.transition = 'none';
         SLIDER.insertAdjacentElement('beforeend', sliderSectionFirst);
         SLIDER.style.marginLeft = '-64%';
+        console.log(sliderActual)
     }, 500);
 };
 btnRight.addEventListener('click', MOVERIGHT);
 
+
 // Automatización (cómo cambiar que no se mueva cuando la tarjeta detras está visible? Tambien evitar-lo si el usuario justo acaba de cambiar tarjeta)
 // setInterval(MOVERIGHT, 10000);
+const MOVER = () =>{
+    let cards = document.querySelectorAll('.card');
+    let cardActual = document.querySelector('.actual')
+    let btnRight = document.querySelector('.slider-btn-right');
+    let btnLeft = document.querySelector('.slider-btn-left');
+    console.log(cards);
+    // btnRight.addEventListener('click', () =>{
+    //     cardActual.classList.remove('actual');
+    //     for(let i= 0; cards.length, i++){
+    //         if (i === 1){
+                
+    //         }
+    //     }
+    //     cards.forEach(card => {
+    //         card.style.marginLeft = '-128%';
+    //         card.style.transition = 'all 0.5s';
+    //     });
+    
+
+    // })
+   
+    // card.classList.add('actual');
+
+}
+
+//Dropdown
+let margins = []
+//Hace falta relacionar margins/position con class actual para que el slider se mueva a cualquier lado indicándole un margin o algo
+//PERO como hacemos que se muevan los elements en el html...
+
+
+const DROPDOWNLINK = () =>{
+    //Esta funcion hace que al seleccionar un link del dropdown del nav quite el class actual de la card actual y le ponga class actual a la card seleccionada desde el nav seleccionándola con la class
+    let cardLinks = document.querySelectorAll('.dropdownLink');
+    let cardActual = document.querySelector('.actual');
+    let cards = document.querySelectorAll('.card');
+    console.log(cardLinks);
+    console.log(cardActual);
+    console.log(cards)
+    cardLinks.forEach(cardLink => {
+        cardLink.addEventListener('click', (e) =>{
+            let cardLinkSelected = e.target;
+            let classSelected = cardLinkSelected.classList[1];
+            console.log(classSelected);
+            let cardSelected = document.querySelectorAll(`.${classSelected}`)[1];
+            console.log(cardSelected);
+            cardActual.classList.remove('.actual');
+            cardSelected.classList.add('actual');
+            console.log('')
+        })
+    });
+}
+document.querySelector('.dropbtn').addEventListener('click', DROPDOWNLINK);
 
 //MODAL
 // Get the modal
