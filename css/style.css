@@ -17,7 +17,7 @@ html{
     --grey: #352E28;
     --green: #3D5D52;
     --light-green: #3d5d5251;
-    --beige: #D3B8A5;
+    --beige: #d3b8a5d3;
     --link: #0c4ebf;
     --font-names: 'Dancing Script', cursive;
     --font-text: 'Inter', sans-serif;
@@ -488,5 +488,22 @@ form {
 
 /** FOOTER **/
 footer{
-    flex: 0 0 auto; /* flex-grow, flex-shrink, flex-basis */
+    flex: 0 0 15vh;
+    & p, div{
+        margin: 0 auto;
+    }
+    & div{
+        display: flex;
+        gap: 1rem;
+    }
+    & div>p{
+        font-size: 1.5rem;
+        & i{
+            color: var(--grey);
+            font-size: 1.8rem;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
 }
