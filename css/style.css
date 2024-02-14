@@ -265,6 +265,7 @@ section:first-of-type{
     }
 }
 
+
 /** HORIZONTAL SLIDE */
 .container-slider{
     width: 100%;
@@ -445,6 +446,16 @@ section:first-of-type{
         top: 0;
         opacity: 1
     }
+}
+
+
+/** Section - Description */
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: block;
 }
 
 /** FORM **/
