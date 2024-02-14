@@ -43,6 +43,7 @@ h1 {
     text-align: center;
     top: 35vh;
     color: var(--grey);
+    font-size: 4rem;
 }
 
 h2 {
