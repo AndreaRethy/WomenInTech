@@ -300,10 +300,46 @@
 
     <!-- Contenido Secundario -->
     <aside id="newsletter">
-        <form action="#" method="post" id="form">
+        <form action="#" method="post" name="form" id="form">
             <fieldset>
                 <legend><h2>Sign up for our newsletter</h2></legend>
-                <ul>
+                <div id="div-name">
+                    <!-- <label for="name" class="tag-input">Name</label> -->
+                    <div class="div-input">
+                        <input type="text" name="name" id="name" class="data-input" autocomplete="off" placeholder="Name">
+                        <i class="validation-status fa-solid fa-circle-xmark fa-lg"></i>
+                    </div>
+                    <p class="data-input-error">Type a valid name</p>
+                </div>
+                <div id="div-surname">
+                    <!-- <label for="surname" class="tag-input">Surname</label> -->
+                    <div class="div-input">
+                        <input type="text" name="surname" id="surname" class="data-input" autocomplete="off" placeholder="Surname">
+                        <i class="validation-status fa-solid fa-circle-xmark fa-lg"></i>
+                    </div>
+                    <p class="data-input-error">Type a valid surname</p>
+                </div>
+                <div id="div-mail">
+                    <!-- <label for="mail" class="tag-input">E-mail</label> -->
+                    <div class="div-input">
+                        <input type="email" name="mail" id="mail" class="data-input" autocomplete="off" placeholder="example@email.com">
+                        <i class="validation-status fa-solid fa-circle-xmark fa-lg"></i>
+                    </div>
+                    <p class="data-input-error">Type a valid email</p>
+                </div>
+                <!-- Campo Términos y Condiciones -->
+                <div class="div-terms">
+                    <!-- <label for="terms" class="tag-input"> -->
+                        <input type="checkbox" name="terms" id="terms" class="terms_checkobox">
+                        I accept the terms and conditions
+                    </label>
+                </div>
+                <!-- Mensaje de error -->
+                <div class="m-error" id="m_error">
+                    <p><i class="fa-solid fa-triangle-exclamation"></i><strong>Check the introduced data</strong></p>
+                </div>
+               
+                <!-- <ul>
                     <li>
                         <input type="text" name="name" id="name" aria-label="name" placeholder="Name" required>
                     </li>
@@ -317,15 +353,21 @@
                         <input type="checkbox" name="privacy-policy" id="privacy-policy" required>
                         <label for="privacy-policy">Accept our Privacy Policy. <a href="#">Terms</a></label>
                     </li>
-                </ul>
+                </ul> -->
             </fieldset>
             <fieldset>
-                <ul>
+                <input type="reset" value="Clear">
+                 <!-- Botón y mensaje envío -->
+                 <div class="div-btn-submit">
+                    <button type="submit" class="btn_submit">Submit</button>
+                    <p class="m-success" id="m-success">Form sent successfully</p>
+                </div>
+                <!-- <ul>
                     <li>
                         <input type="reset" value="Clear">
                         <input type="submit" value="Submit">
                     </li>
-                </ul>
+                </ul> -->
             </fieldset>
         </form>
     </aside>
