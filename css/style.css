@@ -255,7 +255,7 @@ section:first-of-type{
         }
         & .overlay {
             position: absolute;
-            background-color: #de1c1c6c;
+            /* background-color: #de1c1c6c; */
             bottom: 25%;
             left: 0;
             width: 187px;
