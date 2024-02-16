@@ -132,7 +132,7 @@ let abrirVentanas = document.querySelectorAll('.abrir');
 
 let cardVideos = document.querySelectorAll('.card-video');
 
-// Get the <span> element that closes the modal
+// Get the <i> element that closes the modal
 let cerrar = document.querySelector('#cerrar');
 
 //Funcion abrir modal
