@@ -310,12 +310,11 @@ section:first-of-type{
 
 .slider-btn{
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    top: 70%;
+    transform: translateY(-70%);
+    width: 14%;
+    height: 700px;
     background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
@@ -324,16 +323,19 @@ section:first-of-type{
 }
 
 .slider-btn-right{
-    right: 10px;
+    right: 0px;
+    border-radius: 15px 0 0 15px;
 }
 
 .slider-btn-left{
-    left: 10px;
+    left: 0px;
+    border-radius: 0 15px 15px 0;
 }
 
 .slider-btn:hover{
-    background-color: #fff;
+    /* background-color: #fff; */
     cursor: pointer;
+    font-size: 40px;
 }
 
 /** FLIP  */
@@ -621,4 +623,10 @@ footer{
 
     .card{
         height: 650px;
+    }
+
+    .slider-btn{
+        width: 8%;
+        height: 650px;
+    }
 }
