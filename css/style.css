@@ -193,13 +193,16 @@ header {
 main{
     flex: 1 0 auto;
     width: 100vw;
-    max-width: 900px;
+    /* max-width: 900px; */
     /* padding: 0 1em; */
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
     gap: 2rem;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
 }
 
@@ -212,7 +215,7 @@ section:first-of-type{
 .card{
     /* width: 300px; */
     width: 18%;
-    height: 600px;
+    height: 700px;
     border-radius: 15px;
     flex: none;
     & figure{
@@ -290,14 +293,14 @@ section:first-of-type{
 /** HORIZONTAL SLIDE */
 .container-slider{
     width: 100%;
-    max-width: 900px;
+    max-width: 600px;
     /* border: 2px solid red; */
     position: relative;
     overflow: hidden;
 }
 
 .slider{
-    height: 615px;
+    height: 715px;
     width: 400%;
     display: flex;
     gap: 1.5%;
@@ -310,12 +313,11 @@ section:first-of-type{
 
 .slider-btn{
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    top: 70%;
+    transform: translateY(-70%);
+    width: 14%;
+    height: 700px;
     background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
@@ -324,16 +326,19 @@ section:first-of-type{
 }
 
 .slider-btn-right{
-    right: 10px;
+    right: 0px;
+    border-radius: 15px 0 0 15px;
 }
 
 .slider-btn-left{
-    left: 10px;
+    left: 0px;
+    border-radius: 0 15px 15px 0;
 }
 
 .slider-btn:hover{
-    background-color: #fff;
+    /* background-color: #fff; */
     cursor: pointer;
+    font-size: 40px;
 }
 /** Filter actual */
 .card{
@@ -461,6 +466,10 @@ section:first-of-type{
 
 
 /** Section - Description */
+#details{
+    max-width: 500px;
+}
+
 .invisible {
     display: none;
 }
@@ -615,5 +624,36 @@ footer{
                 opacity: 0.7;
             }
         }
+    }
+}
+
+
+/** MEDIA QUERIES */
+@media (min-width: 426px) {
+    .slider{
+        height: 665px;
+    }
+
+    .card{
+        height: 650px;
+    }
+
+    .slider-btn{
+        width: 8%;
+        height: 650px;
+    }
+
+    main{
+        width: 90vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #introduction{
+        grid-column: 1/3;
     }
 }
