@@ -19,23 +19,28 @@ SLIDER.insertAdjacentElement('afterbegin', sliderSectionLast);
 // Función listener para el botón izquierdo
 btnLeft.addEventListener('click', () =>{
     let sliderSection = document.querySelectorAll('.card');
+    let womenDetails = document.querySelectorAll('.details');
     let sliderSectionLast = sliderSection[sliderSection.length-1];
+    let detailsSectionLast = womenDetails[womenDetails.length-1];
     let sliderActual = sliderSection[0];
+    let detailActual = womenDetails[0];
 
     sliderSection.forEach(slider => {
         slider.classList.remove('actual');
     });
     sliderActual.classList.add('actual');
-    // console.log(sliderActual.innerHTML);
 
-    // const slideWidth = sliderActual.clientWidth;
-    // console.log(slideWidth);
+    womenDetails.forEach(detail => {
+        detail.classList.remove('visible');
+    });
+    detailActual.classList.add('visible');
     
     SLIDER.style.marginLeft = '0';
     SLIDER.style.transition = 'all 0.5s';
     setTimeout(() =>{
         SLIDER.style.transition = 'none';
         SLIDER.insertAdjacentElement('afterbegin', sliderSectionLast);
+        DETAILS.insertAdjacentElement('afterbegin', detailsSectionLast);
         SLIDER.style.marginLeft = '-64%';
     }, 500);
  });
