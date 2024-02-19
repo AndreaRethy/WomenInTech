@@ -59,10 +59,10 @@ h2 {
     color: var(--grey);
 }
 
-.card-front>p:last-of-type {
+/* .card-front>p:last-of-type {
     font-family: var(--font-names);
     font-weight: 700;
-}
+} */
 
 
 /** HEADER **/
@@ -217,7 +217,8 @@ section:first-of-type{
     flex: none;
     & figure{
         width: 100%;
-        max-height: 50%;
+        /* max-height: 50%; */
+        height: 105px;
         position: relative;
         & img{
             width: 100%;
@@ -248,6 +249,18 @@ section:first-of-type{
             object-fit: contain;
             border: none;
             box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20);
+            position: absolute;
+            bottom: 25%;
+            left: 0;
+        }
+        & .overlay {
+            position: absolute;
+            /* background-color: #de1c1c6c; */
+            bottom: 25%;
+            left: 0;
+            width: 187px;
+            height: 105px;
+            cursor: pointer;
         }
     }
     & h3, p{
@@ -272,6 +285,7 @@ section:first-of-type{
         text-align: right;
     }
 }
+
 
 /** HORIZONTAL SLIDE */
 .container-slider{
@@ -362,22 +376,6 @@ section:first-of-type{
 
 /** MODAL */
 
-.overlay {
-    position: absolute;
-    /* background-color: #de1c1c6c; */
-    bottom: 25%;
-    left: 0;
-    width: 100%;
-    height: 25%;
-    cursor: pointer;
-}
-.video-container iframe{
-    position: absolute;
-    bottom: 25%;
-    left: 0;
-    width: 100%;
-    height: 25%;
-}
 /* Modal (background) */
 .modal{
     position: fixed;
@@ -453,6 +451,16 @@ section:first-of-type{
         top: 0;
         opacity: 1
     }
+}
+
+
+/** Section - Description */
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: block;
 }
 
 /** FORM **/
