@@ -335,7 +335,13 @@ section:first-of-type{
     background-color: #fff;
     cursor: pointer;
 }
-
+/** Filter actual */
+.card{
+    filter: opacity(0.3);
+}
+.actual{
+    filter: none;
+}
 /** FLIP  */
 /* The flip card */
 .card {
