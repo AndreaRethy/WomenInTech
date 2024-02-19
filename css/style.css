@@ -196,10 +196,13 @@ main{
     /* max-width: 900px; */
     /* padding: 0 1em; */
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
     gap: 2rem;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
 }
 
@@ -457,6 +460,10 @@ section:first-of-type{
 
 
 /** Section - Description */
+#details{
+    max-width: 500px;
+}
+
 .invisible {
     display: none;
 }
@@ -628,5 +635,19 @@ footer{
     .slider-btn{
         width: 8%;
         height: 650px;
+    }
+
+    main{
+        width: 90vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #introduction{
+        grid-column: 1/3;
     }
 }
