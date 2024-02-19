@@ -193,7 +193,7 @@ header {
 main{
     flex: 1 0 auto;
     width: 100vw;
-    max-width: 900px;
+    /* max-width: 900px; */
     /* padding: 0 1em; */
     margin: 0 auto;
     display: flex;
@@ -212,7 +212,7 @@ section:first-of-type{
 .card{
     /* width: 300px; */
     width: 18%;
-    height: 600px;
+    height: 700px;
     border-radius: 15px;
     flex: none;
     & figure{
@@ -290,14 +290,14 @@ section:first-of-type{
 /** HORIZONTAL SLIDE */
 .container-slider{
     width: 100%;
-    max-width: 900px;
+    max-width: 600px;
     /* border: 2px solid red; */
     position: relative;
     overflow: hidden;
 }
 
 .slider{
-    height: 615px;
+    height: 715px;
     width: 400%;
     display: flex;
     gap: 1.5%;
@@ -610,4 +610,15 @@ footer{
             }
         }
     }
+}
+
+
+/** MEDIA QUERIES */
+@media (min-width: 426px) {
+    .slider{
+        height: 665px;
+    }
+
+    .card{
+        height: 650px;
 }
