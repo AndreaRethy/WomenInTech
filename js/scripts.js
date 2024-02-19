@@ -1,6 +1,7 @@
 // Declaración de variables
 const SLIDER = document.querySelector('#slider');
 let sliderSection = document.querySelectorAll('.card');
+let DETAILS = document.querySelector('#details');
 
 // Seleccionamos el últiomo slider
 let sliderSectionLast = sliderSection[sliderSection.length-1];
@@ -43,20 +44,28 @@ btnLeft.addEventListener('click', () =>{
 // Función listener para el botón derecho
 const MOVERIGHT = () =>{
     let sliderSection = document.querySelectorAll('.card');
+    let womenDetails = document.querySelectorAll('.details');
     let sliderSectionFirst = sliderSection[0];
+    let detailsSectionFirst = womenDetails[0];
     let sliderActual = sliderSection[2];
+    let detailActual = womenDetails[1];
 
     sliderSection.forEach(slider => {
         slider.classList.remove('actual');
     });
     sliderActual.classList.add('actual');
-    // console.log(sliderActual.innerHTML);
+
+    womenDetails.forEach(detail =>{
+        detail.classList.remove('visible');
+    });
+    detailActual.classList.add('visible');
 
     SLIDER.style.marginLeft = '-128%';
     SLIDER.style.transition = 'all 0.5s';
     setTimeout(() =>{
         SLIDER.style.transition = 'none';
         SLIDER.insertAdjacentElement('beforeend', sliderSectionFirst);
+        DETAILS.insertAdjacentElement('beforeend', detailsSectionFirst);
         SLIDER.style.marginLeft = '-64%';
         console.log(sliderActual)
     }, 500);
