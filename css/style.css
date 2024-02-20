@@ -25,7 +25,6 @@ html{
     /* FORM VALIDATION COLORS */
     --bg-error: rgb(246, 96, 96);
     --bt-btn: rgb(51,51,51);
-    /* --color-border: rgb(0,117,255); */
     --color-shadow: rgba(46,45,45,0.4);
     --color-send: rgb(17,146,0);
     --color-check: rgb(30,209,45);
@@ -367,7 +366,7 @@ section:first-of-type{
     box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20);
 }
 
-  /* Do an horizontal flip on hover (only card in the middle) */
+  /* Do a horizontal flip on hover (only card in the middle) */
 .actual:hover .card-inner {
     transform: rotateY(180deg);
 }
@@ -481,15 +480,18 @@ section:first-of-type{
 /** FORM **/
 form {
     width: 100%;
+    max-width: 800px;
     padding: 0 1em;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    & fieldset:first-of-type{
+        width: 100%;
+    }
     & fieldset{
         border: none;
-        width: 100%;
         & .div-input {
             list-style: none;
             margin: 0.5em 0;
@@ -524,10 +526,15 @@ form {
         & input[type="submit"] {
             background-color: var(--green);
             color: var(--white);
+            max-width: 200px;
+            margin: 0;
         }
         & input[type="reset"] {
             background-color: var(--white);
             color: var(--green);
+            max-width: 200px;
+            margin-right: 18px;
+            margin-bottom: 9px;
         }
         & input[type="submit"]:hover,
         input[type="reset"]:hover,
@@ -543,6 +550,9 @@ form {
             }
         }
     }
+    & fieldset:last-of-type{
+        margin: 0.5rem auto;
+    }
 }
 
 .data-input-error{
@@ -553,17 +563,16 @@ form {
 .data-input-error-active{
     display: block;
 }
+.div-input{
+    position: relative;
+}
 .validation-status{
     position: absolute;
     right: 10px;
-    bottom: 50%;
+    top: 50%;
     font-size: 1.5rem;
     z-index: 1;
-    display: none;
-}
-
-.validation-status-active{
-    display: block;
+    opacity: 0;
 }
 
 .m_error{
@@ -572,21 +581,13 @@ form {
     background-color: var(--bg-error);
     padding: 0 15px;
     border-radius: 3px;
+    margin: 1rem 0;
     display: none;
 }
 .m_error p{
     margin: 0;
 }
 .m_error-active{
-    display: block;
-}
-
-.m_success{
-    font-size: 2rem;
-    color: var(--color-send);
-    display: none;
-}
-.m_success-active{
     display: block;
 }
 
@@ -604,6 +605,7 @@ form {
     border: 1px solid var(--color-warning);
     color: var(--color-warning);
 }
+
 
 /** FOOTER **/
 footer{
@@ -645,6 +647,12 @@ footer{
 
     main{
         width: 90vw;
+    }
+}
+
+@media (min-width: 768px){
+    form fieldset:last-of-type{
+        width: 424px;
     }
 }
 
