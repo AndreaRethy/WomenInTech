@@ -180,9 +180,8 @@ window.addEventListener('click', (e)=>{
 
 //                          * Form validation //////////////////////////////////////
 
-
 const expresiones = {
-    name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+    name: /^[a-zA-ZÀ-ÿ\s]{4,40}$/,
     surname: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
     mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9-,]+$/
 }
@@ -198,11 +197,11 @@ const form  = document.querySelector('#form');
 const inputs  = document.querySelectorAll('#form input');
 
 inputs.forEach((input) => {
-    input.addEventListener('keyup', validateform);
-    input.addEventListener('blur', validateform);
+    input.addEventListener('keyup', validateForm);
+    input.addEventListener('blur', validateForm);
 });
 
-function validateform(e){
+function validateForm(e){
     switch(e.target.name){
         case 'name': 
             validateInput(expresiones.name, e.target, e.target.name);
@@ -226,7 +225,6 @@ function validateInput(expresion, input, campo){
         document.querySelector(`#div-${campo} .data-input-error`).classList.remove('.data-input-error-active');
        divs[campo] = true;
     }else{
-        console.log('incorrect')
         document.querySelector(`#div-${campo}`).classList.add('incorrect');
         document.querySelector(`#div-${campo}`).classList.remove('correct');
         document.querySelector(`#div-${campo} i`).classList.add('fa-circle-xmark');
@@ -239,12 +237,10 @@ function validateInput(expresion, input, campo){
 //Función para enviar el formulario
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
-    if(divs.name && divs.surname && divs.email && terms.checked){
+    if(divs.name && divs.surname && divs.mail && terms.checked){
+        form.submit();
+        alert('Form sent successfully');
         form.reset();
-        document.querySelector('#m-success').classList.add('m-success-active');
-        setTimeout(()=>{
-            document.querySelector('#m-success').classList.remove('m-success-active');
-        }, 5000);
         document.querySelectorAll('.correct').forEach((icono) =>{
             icono.classList.remove('correct')
         });
@@ -254,5 +250,15 @@ form.addEventListener('submit', (e) =>{
         document.querySelector('#m_error').classList.add('m_error-active');
 
     }
-})
+});
 
+form.addEventListener('reset', () =>{
+    document.querySelectorAll('.correct').forEach((icono) =>{
+        icono.classList.remove('correct');
+    });
+
+    document.querySelectorAll('.incorrect').forEach((icono) =>{
+        icono.classList.remove('incorrect');
+    });
+    document.querySelector('#m_error').classList.remove('m_error-active');
+});
