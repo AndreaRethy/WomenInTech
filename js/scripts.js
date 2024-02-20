@@ -1,10 +1,13 @@
 // Declaración de variables
 const SLIDER = document.querySelector('#slider');
 let sliderSection = document.querySelectorAll('.card');
+let womenDetails = document.querySelectorAll('.details');
 let DETAILS = document.querySelector('#details');
 
 // Seleccionamos el últiomo slider
 let sliderSectionLast = sliderSection[sliderSection.length-1];
+
+let detailsSectionLast = womenDetails[womenDetails.length-1];
 
 
 //Declaramos variables para los botones
@@ -14,6 +17,8 @@ const btnRight = document.querySelector('#btn-right');
 
 // Situamos la última imagen en la primera posición
 SLIDER.insertAdjacentElement('afterbegin', sliderSectionLast);
+
+DETAILS.insertAdjacentElement('afterbegin', detailsSectionLast);
 
 
 // Función listener para el botón izquierdo
@@ -53,7 +58,9 @@ const MOVERIGHT = () =>{
     let sliderSectionFirst = sliderSection[0];
     let detailsSectionFirst = womenDetails[0];
     let sliderActual = sliderSection[2];
-    let detailActual = womenDetails[1];
+    let detailActual = womenDetails[2];
+    console.log(sliderSection);
+    console.log(womenDetails);
 
     sliderSection.forEach(slider => {
         slider.classList.remove('actual');
