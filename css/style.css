@@ -210,23 +210,34 @@ section:first-of-type{
     padding: 1rem;
 }
 
-/* General styles for card */
+/** General styles for card */
 .card{
     /* width: 300px; */
     width: 18%;
-    height: 700px;
+    height: 650px;
     border-radius: 15px;
     flex: none;
     & figure{
         width: 100%;
-        /* max-height: 50%; */
-        height: 105px;
+        min-height: 168px;
+        max-height: 400px;
         position: relative;
         & img{
             width: 100%;
             height: 100%;
             border-radius: 15px 15px 0 0;
             object-fit: cover;
+            object-position: top;
+        }
+        & #click{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 60%;
+            left: 38%;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 5px;
+            border-radius: 50%;
         }
         & figcaption{
             background-color: rgba(51, 51, 51, 0.7);
@@ -234,6 +245,7 @@ section:first-of-type{
             color: var(--white);
             position: absolute;
             bottom: 0;
+            padding: 0 .5rem;
             & a{
                 color: inherit;
                 text-decoration: none;
@@ -241,28 +253,6 @@ section:first-of-type{
                     text-decoration: underline;
                 }
             }
-        }
-        & iframe {
-            /* width: 560px;
-            height: 315px; */
-            width: 187px;
-            height: 105px;
-            border-radius: 15px;
-            object-fit: contain;
-            border: none;
-            box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20);
-            position: absolute;
-            bottom: 25%;
-            left: 0;
-        }
-        & .overlay {
-            position: absolute;
-            /* background-color: #de1c1c6c; */
-            bottom: 25%;
-            left: 0;
-            width: 187px;
-            height: 105px;
-            cursor: pointer;
         }
     }
     & h3, p{
@@ -273,6 +263,31 @@ section:first-of-type{
         color: var(--grey);
     }
 }
+
+
+.card figure #click{
+    animation-name: click;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-delay: 1.5s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    /* animation-timeline: view(y);
+    animation-range-start: entry;
+    animation-play-state: running; */
+}
+
+@keyframes click{
+    0%{transform: scale(1);}
+    20%{transform: scale(.9);}
+    40%{transform: scale(1);}
+    60%{transform: scale(.9);}
+    80%{transform: scale(1);}
+    97%{opacity: 1;}
+    100%{opacity: 0; transform: scale(.8);}
+}
+
 .card-front, .card-back {
     display: flex;
     flex-direction: column;
@@ -280,11 +295,31 @@ section:first-of-type{
     gap: 0.5em;
     background-color: var(--white);
     border-radius: 15px;
+    text-align: left;
+    & h3, h4{
+        text-align: center;
+    }
 }
 
-.card-front {
-    & p{
-        text-align: right;
+.card-back figure{
+    width: 187px;
+    height: 105px;
+    & iframe {
+        width: 187px;
+        height: 105px;
+        border-radius: 15px;
+        object-fit: contain;
+        border: none;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20);
+    }
+    & .overlay {
+        position: absolute;
+        /* background-color: #de1c1c6c; */
+        bottom: 25%;
+        left: 0;
+        width: 187px;
+        height: 105px;
+        cursor: pointer;
     }
 }
 
@@ -299,7 +334,7 @@ section:first-of-type{
 }
 
 .slider{
-    height: 715px;
+    height: 665px;
     width: 400%;
     display: flex;
     gap: 1.5%;
@@ -315,7 +350,7 @@ section:first-of-type{
     top: 70%;
     transform: translateY(-70%);
     width: 14%;
-    height: 700px;
+    height: 650px;
     background-color: rgba(255, 255, 255, 0.7);
     text-align: center;
     font-size: 30px;
@@ -384,9 +419,8 @@ section:first-of-type{
     transform: rotateY(180deg);
 }
 
-/** MODAL */
 
-/* Modal (background) */
+/** MODAL */
 .modal{
     position: fixed;
     z-index: 3;
@@ -467,6 +501,7 @@ section:first-of-type{
 /** Section - Description */
 #details{
     max-width: 500px;
+    padding: 1rem;
 }
 
 .invisible {
@@ -476,6 +511,7 @@ section:first-of-type{
 .visible {
     display: block;
 }
+
 
 /** FORM **/
 form {
@@ -631,18 +667,23 @@ footer{
 
 
 /** MEDIA QUERIES */
-@media (min-width: 426px) {
+@media (min-width: 375px) {
     .slider{
-        height: 665px;
+        height: 565px;
     }
 
     .card{
-        height: 650px;
+        height: 550px;
     }
 
     .slider-btn{
+        height: 550px;
+    }
+}
+
+@media (min-width: 426px) {
+    .slider-btn{
         width: 8%;
-        height: 650px;
     }
 
     main{
@@ -651,6 +692,19 @@ footer{
 }
 
 @media (min-width: 768px){
+    .card-back figure{
+        width: 300px;
+        height: 168px;
+        & iframe {
+            width: 300px;
+            height: 168px;
+        }
+        & .overlay {
+            width: 300px;
+            height: 168px;
+        }
+    }
+
     form fieldset:last-of-type{
         width: 424px;
     }
