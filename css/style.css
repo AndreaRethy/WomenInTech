@@ -32,6 +32,7 @@ html{
 }
 
 body{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -96,7 +97,7 @@ header {
         height: 70vh;
     }
     & figure {
-        width: 100vw;
+        width: 100%;
         height: 70vh;
         & video{
             height: 70vh;
@@ -646,8 +647,16 @@ form {
 /** FOOTER **/
 footer{
     flex: 0 0 15vh;
-    & p, div{
+    & p, div, a{
         margin: 0 auto;
+    }
+    & a{
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     & div{
         display: flex;
