@@ -173,10 +173,10 @@ window.addEventListener("click", (e) => {
 //                          * Form validation //////////////////////////////////////
 
 const expresiones = {
-  name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-  surname: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-  mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9-,]+$/,
-};
+    name: /^[a-zA-ZÀ-ÿ\s]{4,40}$/,
+    surname: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+    mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9-,]+$/
+}
 
 //Validation status to send
 const divs = {
@@ -188,66 +188,68 @@ const form = document.querySelector("#form");
 const inputs = document.querySelectorAll("#form input");
 
 inputs.forEach((input) => {
-  input.addEventListener("keyup", validateform);
-  input.addEventListener("blur", validateform);
+    input.addEventListener('keyup', validateForm);
+    input.addEventListener('blur', validateForm);
 });
 
-function validateform(e) {
-  switch (e.target.name) {
-    case "name":
-      validateInput(expresiones.name, e.target, e.target.name);
-      break;
-    case "surname":
-      validateInput(expresiones.surname, e.target, e.target.name);
-      break;
-    case "mail":
-      validateInput(expresiones.mail, e.target, e.target.name);
-      break;
-  }
+function validateForm(e){
+    switch(e.target.name){
+        case 'name': 
+            validateInput(expresiones.name, e.target, e.target.name);
+            break;
+        case 'surname':
+            validateInput(expresiones.surname, e.target, e.target.name);
+            break;
+        case 'mail':
+            validateInput(expresiones.mail, e.target, e.target.name);
+            break;
+    }
 }
 
-function validateInput(expresion, input, campo) {
-  if (expresion.test(input.value)) {
-    // console.log(document.querySelector(`#div-${campo} i`).classList)
-    document.querySelector(`#div-${campo}`).classList.remove("incorrect");
-    document.querySelector(`#div-${campo}`).classList.add("correct");
-    document
-      .querySelector(`#div-${campo} i`)
-      .classList.remove("fa-circle-xmark");
-    document.querySelector(`#div-${campo} i`).classList.add("fa-circle-check");
-    document
-      .querySelector(`#div-${campo} .data-input-error`)
-      .classList.remove(".data-input-error-active");
-    divs[campo] = true;
-  } else {
-    console.log("incorrect");
-    document.querySelector(`#div-${campo}`).classList.add("incorrect");
-    document.querySelector(`#div-${campo}`).classList.remove("correct");
-    document.querySelector(`#div-${campo} i`).classList.add("fa-circle-xmark");
-    document
-      .querySelector(`#div-${campo} i`)
-      .classList.remove("fa-circle-check");
-    document
-      .querySelector(`#div-${campo} .data-input-error`)
-      .classList.add(".data-input-error-active");
-    divs[campo] = false;
-  }
+function validateInput(expresion, input, campo){
+    if(expresion.test(input.value)){
+        // console.log(document.querySelector(`#div-${campo} i`).classList)
+        document.querySelector(`#div-${campo}`).classList.remove('incorrect');
+        document.querySelector(`#div-${campo}`).classList.add('correct');
+        document.querySelector(`#div-${campo} i`).classList.remove('fa-circle-xmark');
+        document.querySelector(`#div-${campo} i`).classList.add('fa-circle-check');
+        document.querySelector(`#div-${campo} .data-input-error`).classList.remove('.data-input-error-active');
+       divs[campo] = true;
+    }else{
+        document.querySelector(`#div-${campo}`).classList.add('incorrect');
+        document.querySelector(`#div-${campo}`).classList.remove('correct');
+        document.querySelector(`#div-${campo} i`).classList.add('fa-circle-xmark');
+        document.querySelector(`#div-${campo} i`).classList.remove('fa-circle-check');
+        document.querySelector(`#div-${campo} .data-input-error`).classList.add('.data-input-error-active');
+        divs[campo] = false;
+    }
 }
 
 //Función para enviar el formulario
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (divs.name && divs.surname && divs.email && terms.checked) {
-    form.reset();
-    document.querySelector("#m-success").classList.add("m-success-active");
-    setTimeout(() => {
-      document.querySelector("#m-success").classList.remove("m-success-active");
-    }, 5000);
-    document.querySelectorAll(".correct").forEach((icono) => {
-      icono.classList.remove("correct");
+form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    if(divs.name && divs.surname && divs.mail && terms.checked){
+        form.submit();
+        alert('Form sent successfully');
+        form.reset();
+        document.querySelectorAll('.correct').forEach((icono) =>{
+            icono.classList.remove('correct')
+        });
+        document.querySelector('#m_error').classList.remove('m_error-active');
+
+    }else{
+        document.querySelector('#m_error').classList.add('m_error-active');
+
+    }
+});
+
+form.addEventListener('reset', () =>{
+    document.querySelectorAll('.correct').forEach((icono) =>{
+        icono.classList.remove('correct');
     });
-    document.querySelector("#m_error").classList.remove("m_error-active");
-  } else {
-    document.querySelector("#m_error").classList.add("m_error-active");
-  }
+
+    document.querySelectorAll('.incorrect').forEach((icono) =>{
+        icono.classList.remove('incorrect');
+    });
+    document.querySelector('#m_error').classList.remove('m_error-active');
 });
