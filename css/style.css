@@ -17,7 +17,10 @@ html{
     --grey: #352E28;
     --green: #3D5D52;
     --light-green: #3d5d5251;
-    --beige: #d3b8a5d3;
+    /* --beige: #d3b8a5d3; */
+    --beige: #e7bdb7d3;
+    --soft-beige: rgba(231, 189, 183, 0.269);
+
     --link: #0c4ebf;
     --font-names: 'Dancing Script', cursive;
     --font-text: 'Inter', sans-serif;
@@ -38,6 +41,7 @@ body{
     gap: 2em;
     height: 100vh;
     background-color: var(--white);
+    /* background-color: var(--soft-beige); */
     font-family: var(--font-text);
 }
 
@@ -94,6 +98,8 @@ header {
         flex-direction: column;
         align-items: center;
         background: linear-gradient(transparent, white);
+        /* background: linear-gradient(transparent, var(--soft-beige)); */
+
         height: 70vh;
     }
     & figure {
@@ -150,11 +156,11 @@ header {
     color: var(--white);
     padding: 1rem;
     background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
+    font-family: inherit; 
+    margin: 0; 
   }
   
-  /* Add a red background color to navbar links on hover */
+  /* Add a background color to navbar links on hover */
   .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: var(--green);
   }
@@ -354,7 +360,7 @@ section:first-of-type{
     perspective: 1000px; /* 3D effect */
 }
   
-  /* This container is needed to position the front and back side */
+/* This container is needed to position the front and back side */
 .card-inner {
     position: relative;
     display: block;
@@ -450,7 +456,6 @@ section:first-of-type{
     cursor: pointer;
     transform: scale(1.15);
 }
-
 
 /* Add Animation */
 @keyframes modal {
@@ -605,6 +610,64 @@ form {
     color: var(--color-warning);
 }
 
+/*? Style for PRINCIPAL */ 
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    & li{
+        list-style: none;
+    }
+    & section{
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.5rem;
+        width: 95%;
+        margin: auto;
+        & h2{
+            font-size: 2rem;
+            color: var(--green);
+            /* background-color: var(--light-green); */
+            letter-spacing: .15rem;
+            padding-bottom: 1.5rem;
+            
+        }
+        
+        & .photo{
+            order: 0;
+            width: 100%;
+            grid-row: 3;
+            & img{
+                width: 100%;
+            }
+        }
+        & h3{
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            /* display: block; */
+            color: var(--grey);
+            width:  100%;
+            align-self: center;
+            padding-bottom: .6rem;
+            border-bottom: 1px solid var(--light-green);
+            margin: .8rem 0;
+            
+            font-size: 1.4rem;
+            /* text-align: center; */
+        }
+        & p{
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            color: var(--grey);
+            text-align: justify;
+        }
+        & iframe{
+            border: none;
+            aspect-ratio: 16/9;
+        }
+    }
+}
+
 /** FOOTER **/
 footer{
     flex: 0 0 15vh;
@@ -658,29 +721,21 @@ footer{
     }
 }
 
-/* Style for principal */
-.principal{
-    display: flex;
-    flex-direction: column;
-    & li{
-        list-style: none;
-    }
-    & section{
-        display: grid;
-        grid-template-columns: 1fr;
-        & figure{
-            width: 100%;
-            & img{
-                width: 100%;
-            }
-        }
-    }
-}
-
 @media only screen and (min-width: 768px){
-    .principal section{
+    /* ?Principal */
+    .principal section:first-child{
+        display: grid;
         grid-template-columns: 1fr 40%;
+        gap: 1rem;
         & h2{
+            grid-column: span 2;
+        }
+        & ul li:first-of-type{ 
+            /* No funciona */
+            margin-top: 0;
+        }
+        & ul li:nth-child(3), ul li:nth-child(4){
+            /* No funciona */
             grid-column: span 2;
         }
         & figure{
