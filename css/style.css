@@ -648,7 +648,7 @@ form {
     color: var(--color-warning);
 }
 
-/*? Style for PRINCIPAL */ 
+/** Style for PRINCIPAL */ 
 
 .principal{
     display: flex;
@@ -670,6 +670,12 @@ form {
             padding-bottom: 1.5rem;
             
         }
+        & figure{
+            width: 100%;
+            & img{
+                width: 100%;
+            }
+        }
         
         & .photo{
             order: 0;
@@ -683,14 +689,14 @@ form {
             font-family: "Roboto", sans-serif;
             font-weight: 400;
             /* display: block; */
-            color: var(--grey);
+            color: var(--green);
             width:  100%;
             align-self: center;
             padding-bottom: .6rem;
             border-bottom: 1px solid var(--light-green);
             margin: .8rem 0;
             
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             /* text-align: center; */
         }
         & p{
@@ -703,6 +709,30 @@ form {
             border: none;
             aspect-ratio: 16/9;
         }
+    }
+}
+/*? DESPLEGABLE*/
+.principal section:nth-child(2){
+    & .container h3{
+        cursor: pointer;
+    }
+    & .container h3::before{
+        content: '+';
+        position: absolute;
+        right: 2rem;
+    }
+    & .container h3:hover{
+        border-bottom: 2px solid var(--green);
+    }
+    & .content{
+        height: 0;
+        overflow: hidden;
+        transition: .7s;
+
+    }
+    & .activa .content{
+        /* padding: 1em; */
+        height: auto;
     }
 }
 
@@ -750,7 +780,12 @@ footer{
     .slider-btn{
         height: 550px;
     }
+    /*? DESPLEGABLE*/
+.principal section:nth-child(2) .container h3{
+      font-size: 1.3rem;
 }
+}
+
 
 @media (min-width: 426px) {
     .slider-btn{
@@ -793,7 +828,7 @@ footer{
 
 @media only screen and (min-width: 768px){
     /* ?Principal */
-    .principal section:first-child{
+    & .principal section:first-child{
         display: grid;
         grid-template-columns: 1fr 40%;
         gap: 1rem;
