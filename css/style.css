@@ -38,7 +38,7 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 2rem;
     height: 100vh;
     background-color: var(--white);
     /* background-color: var(--soft-beige); */
@@ -63,25 +63,20 @@ h2 {
     color: var(--grey);
 }
 
-/* .card-front>p:last-of-type {
-    font-family: var(--font-names);
-    font-weight: 700;
-} */
-
 
 /** HEADER **/
 header {
-    flex: 0 0 70vh;
+    flex: 0 0 60vh;
 }
 
 header, footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--beige);
 }
 
 header {
+    background-color: var(--white);
     & h1, nav, video, #content {
         position: absolute;
         width: 100%;
@@ -100,13 +95,13 @@ header {
         background: linear-gradient(transparent, white);
         /* background: linear-gradient(transparent, var(--soft-beige)); */
 
-        height: 70vh;
+        height: 61vh;
     }
     & figure {
         width: 100%;
-        height: 70vh;
+        height: 60vh;
         & video{
-            height: 70vh;
+            height: 60vh;
             right: 0;
             top: 0;
             object-fit: cover;
@@ -200,7 +195,7 @@ main{
     flex: 1 0 auto;
     width: 100vw;
     /* max-width: 900px; */
-    /* padding: 0 1em; */
+    /* padding: 0 1rem; */
     margin: 0 auto;
     /* display: flex;
     flex-direction: column; */
@@ -299,7 +294,7 @@ section:first-of-type{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.5rem;
     background-color: var(--white);
     border-radius: 15px;
     text-align: left;
@@ -521,14 +516,16 @@ section:first-of-type{
 
 /** FORM **/
 form {
-    width: 100%;
-    max-width: 800px;
-    padding: 0 1em;
-    margin: 0 auto;
+    width: 80%;
+    min-width: 310px;
+    padding: 2rem;
+    margin: 50px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--soft-beige);
+    border-radius: 10px;
     & fieldset:first-of-type{
         width: 100%;
     }
@@ -536,14 +533,15 @@ form {
         border: none;
         & .div-input {
             list-style: none;
-            margin: 0.5em 0;
+            margin: 0.5rem 0;
             display: flex;
             align-items: center;
             gap: .5rem;
         }
         & input {
             width: 100%;
-            padding: 0.5em 1em;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
             border: 1px solid var(--light-green);
             border-radius: 6px;
             outline: none;
@@ -562,6 +560,7 @@ form {
         }
         & input[type="checkbox"] {
             width: min-content;
+            /* padding: 0.5rem; */
             accent-color: #fdfdfd;
             background-color: #3D5D52;
         }
@@ -709,6 +708,8 @@ form {
 /** FOOTER **/
 footer{
     flex: 0 0 15vh;
+    background-color: var(--green);
+    color: var(--white);
     & p, div, a{
         margin: 0 auto;
     }
@@ -718,6 +719,7 @@ footer{
         cursor: pointer;
         &:hover{
             text-decoration: underline;
+            opacity: 0.7;
         }
     }
     & div{
@@ -727,7 +729,7 @@ footer{
     & div>p{
         font-size: 1.5rem;
         & i{
-            color: var(--grey);
+            color: inherit;
             font-size: 1.8rem;
             &:hover{
                 opacity: 0.7;
@@ -779,19 +781,7 @@ footer{
     form fieldset:last-of-type{
         width: 424px;
     }
-}
 
-@media (min-width: 1024px) {
-    main{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    #introduction{
-        grid-column: 1/3;
-    }
-}
-
-@media only screen and (min-width: 768px){
     /* ?Principal */
     .principal section:first-child{
         display: grid;
@@ -812,5 +802,15 @@ footer{
             order: 2;
             grid-row: span 2;
         }
+    }
+}
+
+@media (min-width: 1024px) {
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #introduction{
+        grid-column: 1/3;
     }
 }
