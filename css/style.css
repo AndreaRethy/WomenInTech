@@ -749,6 +749,12 @@ footer{
 
 
 /** MEDIA QUERIES */
+@media (max-width: 375px) {
+    header nav ul li {
+        padding: 0.5rem 0;
+    }
+}
+
 @media (min-width: 375px) {
     .slider{
         height: 565px;
