@@ -665,39 +665,31 @@ form {
         & h2{
             font-size: 2rem;
             color: var(--green);
-            /* background-color: var(--light-green); */
             letter-spacing: .15rem;
             padding-bottom: 1.5rem;
-            
+            text-align: left;
         }
         & figure{
             width: 100%;
             & img{
                 width: 100%;
+                aspect-ratio: 3/3;
+                object-fit: cover;
             }
         }
-        
-        & .photo{
-            order: 0;
-            width: 100%;
-            grid-row: 3;
-            & img{
-                width: 100%;
-            }
+        & ul li #judeFigure img{
+            aspect-ratio: 16/9;
         }
         & h3{
             font-family: "Roboto", sans-serif;
             font-weight: 400;
-            /* display: block; */
             color: var(--green);
             width:  100%;
             align-self: center;
             padding-bottom: .6rem;
             border-bottom: 1px solid var(--light-green);
             margin: .8rem 0;
-            
             font-size: 1.35rem;
-            /* text-align: center; */
         }
         & p{
             font-family: "Roboto", sans-serif;
@@ -733,6 +725,9 @@ form {
     & .activa .content{
         /* padding: 1em; */
         height: auto;
+    }
+    & .activa h3::before{
+        content: '-';
     }
 }
 
@@ -781,9 +776,9 @@ footer{
         height: 550px;
     }
     /*? DESPLEGABLE*/
-.principal section:nth-child(2) .container h3{
+    .principal section:nth-child(2) .container h3{
       font-size: 1.3rem;
-}
+    }
 }
 
 
@@ -828,24 +823,81 @@ footer{
 
 @media only screen and (min-width: 768px){
     /* ?Principal */
-    & .principal section:first-child{
+    & .principal section>ul{
         display: grid;
-        grid-template-columns: 1fr 40%;
-        gap: 1rem;
-        & h2{
+        column-gap: 1rem;
+        grid-template-columns: 60% 1fr 1fr;
+        row-gap: 0;
+        & li:first-child{
+            order:  1;
+            grid-row: span 4;
+        }
+        & li:nth-child(2), li:nth-child(3){
+            order:4;
+        }
+        & li:nth-child(4){
             grid-column: span 2;
-        }
-        & ul li:first-of-type{ 
-            /* No funciona */
-            margin-top: 0;
-        }
-        & ul li:nth-child(3), ul li:nth-child(4){
-            /* No funciona */
-            grid-column: span 2;
-        }
-        & figure{
             order: 2;
-            grid-row: span 2;
+            & h3{
+                margin-top: 0;
+            }
         }
+        & li:nth-child(5){
+            grid-column: span 2;
+            order: 3;
+        }
+        
+    }
+    .principal section:nth-child(2) .container h3::before{
+        right: 5.5rem;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    /* ?Principal */
+    .principal section:nth-child(2) .container h3::before{
+        right: 6.5rem;
+    }
+    & .principal section>ul{
+        grid-template-columns: 45% 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    /* ?Principal */
+    .principal section:nth-child(2) .container h3::before{
+            right: 8.5rem;
+    }
+    .principal section>ul{
+        grid-template-columns: 32%  1fr 1fr;
+        gap: 4rem;
+        & li:first-child{
+            order: 0;
+            grid-row: span 4;
+        }
+        & li:nth-child(2){
+            order:3;
+            & h3{
+                margin-top: 0;
+            }
+        }
+        & li:nth-child(4){
+            grid-column: span 1;
+            order: 1;
+            & h3{
+                margin-top: 0;
+            }
+        }
+        & li:nth-child(5){
+            grid-column: span 1;
+            order: 3;
+        }
+    }
+}
+
+@media only screen and (min-width: 2560px){
+    /* ?Principal */
+    .principal section:nth-child(2) .container h3::before{
+            right: 15rem;
     }
 }
