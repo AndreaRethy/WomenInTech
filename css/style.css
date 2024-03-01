@@ -767,6 +767,7 @@ footer{
     .slider-btn{
         height: 550px;
     }
+
     /*? DESPLEGABLE*/
     .principal section:nth-child(2) .container h3{
       font-size: 1.3rem;
@@ -952,6 +953,18 @@ footer{
 
     #introduction{
         max-width: 1600px;
+    }
+
+    .slider{
+        height: 795px;
+    }
+
+    .card{
+        height: 780px;
+    }
+
+    .slider-btn{
+        height: 780px;
     }
 
     #details{
