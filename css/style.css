@@ -678,6 +678,8 @@ form {
         }
         & iframe{
             border: none;
+            margin: auto;
+            width: 80%;
             aspect-ratio: 16/9;
         }
     }
@@ -851,10 +853,10 @@ footer{
 
 @media only screen and (min-width: 1440px){
     /* ?Principal */
-    .principal section:first-child{
+    .principal section:first-child ul{
         display: grid;
         column-gap: 1rem;
-        grid-template-columns: 60% 1fr 1fr;
+        grid-template-columns: 25% 1fr 1fr;
         row-gap: 0;
         & li:first-child{
             order:  1;
